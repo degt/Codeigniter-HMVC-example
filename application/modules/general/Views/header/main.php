@@ -28,6 +28,10 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-57-precomposed.png">
+    
+    <!-- Javascript -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script src="<?php echo base_url(); ?>/theme/js/bootstrap.js"></script>
   </head>
 
   <body>

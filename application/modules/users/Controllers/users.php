@@ -5,7 +5,7 @@ Date: 9/18/12
 Version: 1.0
 */
 
-class Users extends CI_Controller{
+class Users extends MY_Controller{
 	
 	function __construct(){
 		parent::__construct();
