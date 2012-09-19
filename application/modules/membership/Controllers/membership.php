@@ -53,7 +53,7 @@ class Membership extends MY_Controller{
 	}
 	
 	function account(){
-		
+		$this->load->view('signup');
 	}
 	
 //Hidden Methods not allowed by url request

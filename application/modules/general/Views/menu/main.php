@@ -13,7 +13,7 @@
 			<div class="pull-right">
 				<?php if(is_logged_in()): ?>
 				<ul class="nav">
-					<li><a href="#">My profile</a></li>
+					<li><a href="<?php echo base_url('membership/account'); ?>">My profile</a></li>
 					<li><a href="<?php echo base_url('membership/logout'); ?>">Logout</a></li>
 				</ul>
 				<?php else: ?>
