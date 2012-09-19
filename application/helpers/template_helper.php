@@ -12,4 +12,8 @@ function get_menu($method = 'index'){
 	echo modules::run("general/menu/".$method);
 }
 
+function is_logged_in(){
+	return modules::run("membership/_is_logged_in");	
+}
+
 ?>

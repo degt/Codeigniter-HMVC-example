@@ -42,5 +42,10 @@ $route['default_controller'] = "home";
 $route['404_override'] = '';
 
 
+//Custom routing
+$route['signin'] = 'membership/signin';
+$route['signup'] = 'membership/signup';
+
+
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

@@ -10,6 +10,7 @@
 						<th>ID</th>
 						<th>Name</th>
 						<th>Pass</th>
+						<th>Email</th>
 					</tr>
 				</thead>
 				<tbod>
@@ -18,6 +19,7 @@
 						<td><?php echo $user->id; ?></td>
 						<td><?php echo $user->user_login; ?></td>
 						<td><?php echo $user->user_pass; ?></td>
+						<td><?php echo $user->user_email; ?></td>
 					</tr>
 					<?php endforeach; ?>
 				</tbod>

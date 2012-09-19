@@ -21,6 +21,11 @@ class Menu extends MY_Controller{
 		$data['items'] = $this->menu_model->read();
 		$this->load->view("menu/main", $data);
 	}
+	
+	//Limit access
+	function _remap(){
+		show_404();
+	}
 		
 }
 

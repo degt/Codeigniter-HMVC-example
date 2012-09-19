@@ -1,6 +1,6 @@
   <div class="container pagination-centered">
   	<hr />
-	<p>Footer</p>
+	<p>Developed by degt - 2012</p>
 	  
   </div>
 
