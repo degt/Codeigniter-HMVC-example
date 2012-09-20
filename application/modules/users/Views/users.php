@@ -17,7 +17,7 @@
 					<?php foreach($users as $user): ?>
 					<tr>
 						<td><?php echo $user->id; ?></td>
-						<td><?php echo $user->user_login; ?></td>
+						<td><a href="<?php echo base_url('users/'.$user->user_nicename); ?>"><?php echo $user->user_login; ?></a></td>
 						<td><?php echo $user->user_pass; ?></td>
 						<td><?php echo $user->user_email; ?></td>
 					</tr>

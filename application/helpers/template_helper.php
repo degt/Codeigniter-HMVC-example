@@ -13,7 +13,7 @@ function get_menu($method = 'index'){
 }
 
 function is_logged_in(){
-	return modules::run("membership/_is_logged_in");	
+	return modules::run("users/_is_logged_in");	
 }
 
 ?>

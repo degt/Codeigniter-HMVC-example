@@ -8,7 +8,7 @@ Version: 1.0
 class Footer extends CI_Controller{
 	
 	function index(){
-		$this->load->view("footer/main");
+		$this->load->view("footer");
 	}
 	
 	function _remap(){

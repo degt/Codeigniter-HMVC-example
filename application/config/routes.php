@@ -43,8 +43,8 @@ $route['404_override'] = '';
 
 
 //Custom routing
-$route['signin'] = 'membership/signin';
-$route['signup'] = 'membership/signup';
+$route['signin'] = 'users/signin';
+$route['signup'] = 'users/signup';
 
 
 /* End of file routes.php */

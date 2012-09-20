@@ -15,11 +15,10 @@ class Menu extends MY_Controller{
 	}
 	
 	function index(){
-		
+		//var_dump($this->load->module('users/users')->_userdata());
 		$data['current'] = $this->uri->segment(1);
-		
 		$data['items'] = $this->menu_model->read();
-		$this->load->view("menu/main", $data);
+		$this->load->view("menu", $data);
 	}
 	
 	//Limit access

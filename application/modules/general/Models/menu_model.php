@@ -13,7 +13,6 @@ class Menu_model extends CI_Model{
 	
 	function read(){
 		//Just a prototype
-		
 		$menu = array();
 		
 		$menu[0] = new stdClass();
