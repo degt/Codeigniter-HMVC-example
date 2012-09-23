@@ -1,7 +1,4 @@
-<?php get_header();?>
-<div class="container">
 
-	<?php get_menu(); ?>
 	
 	<div class="row">
 		<div class="span6 offset3">
@@ -34,6 +31,3 @@
 			
 		</div>
 	</div>
-</div>
-
-<?php get_footer(); ?>

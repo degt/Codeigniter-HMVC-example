@@ -1,7 +1,4 @@
-<?php get_header(); ?>
-<div class="container">
-	<?php get_menu(); ?>
-	
+
 	<div class="row">
 		<div class="span12">
 			<table class="table">
@@ -27,6 +24,3 @@
 			
 		</div>
 	</div>
-</div>
-
-<?php get_footer(); ?>

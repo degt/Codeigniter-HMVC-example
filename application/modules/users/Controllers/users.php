@@ -14,14 +14,16 @@ class Users extends MY_Controller{
 	
 	function index(){
 		$data["users"] = $this->user_model->read();
-		$this->load->view('users', $data);
+		$data['main_content'] = 'users';
+		$this->load->view('page', $data);
 	}
 	
 	function user($nicename){
 		$data["user"] = $this->user_model->user_by_nicename($nicename);
 		
 		if($data["user"]){
-			$this->load->view('user', $data);	
+			$data['main_content'] = 'user';
+			$this->load->view('page', $data);
 		}else{
 			show_404();
 		}
@@ -83,13 +85,15 @@ class Users extends MY_Controller{
 			if($insert){
 				$data['message'] = "Updated succesfully";
 				$data['user'] = $this->user_model->user_by_id($this->session->userdata('userid'));
-				$this->load->view('account', $data);
+				$data['main_content'] = 'account';
+				$this->load->view('page', $data);
 			}
 			return;
 		}
 		
 		$data['user'] = $this->user_model->user_by_id($this->session->userdata('userid'));
-		$this->load->view('account', $data);
+		$data['main_content'] = 'account';
+		$this->load->view('page', $data);
 		
 	}
 	
@@ -110,7 +114,11 @@ class Users extends MY_Controller{
 	}
 	
 	function userdata(){
-		return $this->user_model->user_by_id($this->session->userdata('userid'));
+		if($this->_is_logged_in()){
+			return $this->user_model->user_by_id($this->session->userdata('userid'));
+		}else{
+			return false;
+		}
 	}
 		
 }

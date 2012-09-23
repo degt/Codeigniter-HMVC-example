@@ -11,9 +11,9 @@
 			</ul>
 			
 			<div class="pull-right">
-				<?php if(is_logged_in()): ?>
+				<?php if($user_nicename): ?>
 				<ul class="nav">
-					<li><a href="#">Logged as <?php echo @$user_nicename; ?></a></li>
+					<li><a href="#">Logged as <?php echo $user_nicename; ?></a></li>
 					<li><a href="<?php echo base_url('users/account'); ?>">My profile</a></li>
 					<li><a href="<?php echo base_url('users/logout'); ?>">Logout</a></li>
 				</ul>

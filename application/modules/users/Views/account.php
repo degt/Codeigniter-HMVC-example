@@ -1,8 +1,3 @@
-<?php get_header();?>
-<div class="container">
-
-	<?php get_menu(); ?>
-	
 	<div class="row">
 		<div class="span6 offset3">
 			<h1>Account settings</h1>
@@ -45,4 +40,3 @@
 		</div>
 	</div>
 
-<?php get_footer(); ?>

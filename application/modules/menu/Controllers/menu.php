@@ -12,12 +12,13 @@ class Menu extends MY_Controller{
 	function __construct(){
 		parent::__construct();
 		$this->load->model("menu_model");
+		$this->load->module("users");
 	}
 	
 	function index(){
-		//var_dump($this->load->module('users/users')->_userdata());
 		$data['current'] = $this->uri->segment(1);
 		$data['items'] = $this->menu_model->read();
+		$data['user_nicename'] = @$this->users->userdata()->user_nicename;
 		$this->load->view("menu", $data);
 	}
 	
