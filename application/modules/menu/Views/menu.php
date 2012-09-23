@@ -11,12 +11,23 @@
 			</ul>
 			
 			<div class="pull-right">
-				<?php if($user_nicename): ?>
-				<ul class="nav">
-					<li><a href="#">Logged as <?php echo $user_nicename; ?></a></li>
-					<li><a href="<?php echo base_url('users/account'); ?>">My profile</a></li>
-					<li><a href="<?php echo base_url('users/logout'); ?>">Logout</a></li>
-				</ul>
+				<?php if($user): ?>
+				<div class="dropdown">
+					<ul class="nav">
+						<li>
+							<a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="#">
+								Logged as <strong><?php echo $user->user_nicename; ?></strong><b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+								<li><a href="<?php echo base_url('users/'.$user->user_nicename); ?>">View Profile</a></li>
+								<li><a href="<?php echo base_url('users/account'); ?>">Edit Account</a></li>
+								<li class="divider"></li>
+								<li><a href="<?php echo base_url('users/logout'); ?>">Logout</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
 				<?php else: ?>
 				<ul class="nav">
 					<li class="divider-vertical"></li>

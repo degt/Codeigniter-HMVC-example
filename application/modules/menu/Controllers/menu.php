@@ -18,7 +18,13 @@ class Menu extends MY_Controller{
 	function index(){
 		$data['current'] = $this->uri->segment(1);
 		$data['items'] = $this->menu_model->read();
-		$data['user_nicename'] = @$this->users->userdata()->user_nicename;
+		
+		//Admin links
+		if($this->users->_is_admin()){
+			$data['items'][] = $this->menu_model->menu_admin();
+		}
+		
+		$data['user'] = @$this->users->userdata();
 		$this->load->view("menu", $data);
 	}
 	

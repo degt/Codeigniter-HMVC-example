@@ -50,19 +50,25 @@ class Users extends MY_Controller{
 				redirect('');
 			}else{
 				$data['error'] = "You should not pass!";
-				$this->load->view('signin', $data);
+				$data['main_content'] = 'signin';
+				$this->load->view('page', $data);
 			}
 
 			return;
 		}
-		$this->load->view('signin');
+		$data['main_content'] = 'signin';
+		$this->load->view('page', $data);
 	}
 	
 	function signup(){
 		if($_POST){
+			$data['error'] = "You should not pass!";
+			$data['main_content'] = 'signup';
+			$this->load->view('page', $data);
 			return;
 		}
-		$this->load->view('signup');
+		$data['main_content'] = 'signup';
+		$this->load->view('page', $data);
 	}
 	
 	function logout(){
@@ -116,6 +122,14 @@ class Users extends MY_Controller{
 	function userdata(){
 		if($this->_is_logged_in()){
 			return $this->user_model->user_by_id($this->session->userdata('userid'));
+		}else{
+			return false;
+		}
+	}
+	
+	function _is_admin(){
+		if(@$this->users->userdata()->role === 1){
+			return true;
 		}else{
 			return false;
 		}

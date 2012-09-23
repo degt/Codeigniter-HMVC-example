@@ -26,6 +26,16 @@ class Menu_model extends CI_Model{
 		return $menu;
 	}
 	
+	function menu_admin(){
+		//Just a prototype
+
+		$menu = new stdClass();
+		$menu->url = "admin";
+		$menu->name = "Admin";
+
+		return $menu;
+	}
+	
 	function update(){
 		
 	}
