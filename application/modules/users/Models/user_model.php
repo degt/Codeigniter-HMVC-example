@@ -13,7 +13,16 @@ class User_model extends CI_Model{
 		parent::__construct();
 	}
 	
-	function create(){
+	function create($data){
+		$str = $this->db->insert_string($this->table, $data);
+		
+		$query = $this->db->query($str);
+		
+		if($query){
+			return true;
+		}else{
+			return false;
+		}
 		
 	}
 	

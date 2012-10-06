@@ -24,7 +24,8 @@ class Menu extends MY_Controller{
 			$data['items'][] = $this->menu_model->menu_admin();
 		}
 		
-		$data['user'] = @$this->users->userdata();
+		$data['currentuser'] = @$this->users->userdata();
+
 		$this->load->view("menu", $data);
 	}
 	

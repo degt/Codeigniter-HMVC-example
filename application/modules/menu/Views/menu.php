@@ -11,15 +11,15 @@
 			</ul>
 			
 			<div class="pull-right">
-				<?php if($user): ?>
+				<?php if($currentuser): ?>
 				<div class="dropdown">
 					<ul class="nav">
 						<li>
 							<a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="#">
-								Logged as <strong><?php echo $user->user_nicename; ?></strong><b class="caret"></b>
+								Logged as <strong><?php echo $currentuser->user_nicename; ?></strong><b class="caret"></b>
 							</a>
 							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-								<li><a href="<?php echo base_url('users/'.$user->user_nicename); ?>">View Profile</a></li>
+								<li><a href="<?php echo base_url('users/'.$currentuser->user_nicename); ?>">View Profile</a></li>
 								<li><a href="<?php echo base_url('users/account'); ?>">Edit Account</a></li>
 								<li class="divider"></li>
 								<li><a href="<?php echo base_url('users/logout'); ?>">Logout</a></li>
